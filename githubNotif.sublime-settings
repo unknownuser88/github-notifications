@@ -1,0 +1,7 @@
+{
+    // Your GitHub API token
+    // see: https://github.com/blog/1509-personal-api-tokens
+    "token": "",
+    "update_interval": 60, // seconds
+    "template": "Github: {notif}"
+}
