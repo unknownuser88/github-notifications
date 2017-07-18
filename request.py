@@ -52,12 +52,12 @@ def api_request_native(url, data=None, token=None, https_proxy=None, method=None
 
     # print('API request data:', request.get_data())
     # print('API request header:', request.header_items())
-    https_proxy = https_proxy if https_proxy != None else settings.get('https_proxy')
-    if https_proxy:
-        opener = urllib.build_opener(urllib.HTTPHandler(), urllib.HTTPSHandler(),
-                                     urllib.ProxyHandler({'https': https_proxy}))
+    # https_proxy = https_proxy if https_proxy != None else settings.get('https_proxy')
+    # if https_proxy:
+    #     opener = urllib.build_opener(urllib.HTTPHandler(), urllib.HTTPSHandler(),
+    #                                  urllib.ProxyHandler({'https': https_proxy}))
 
-        urllib.install_opener(opener)
+    #     urllib.install_opener(opener)
 
     try:
         with contextlib.closing(urllib.urlopen(request)) as response:
@@ -92,9 +92,9 @@ def api_request_curl(url, data=None, token=None, https_proxy=None, method=None):
     if method:
         config.append('--request "%s"' % method)
 
-    https_proxy = https_proxy if https_proxy != None else settings.get('https_proxy')
-    if https_proxy:
-        config.append(https_proxy)
+    # https_proxy = https_proxy if https_proxy != None else settings.get('https_proxy')
+    # if https_proxy:
+    #     config.append(https_proxy)
 
     with named_tempfile() as header_output_file:
         config.append('--dump-header "%s"' % header_output_file.name)
