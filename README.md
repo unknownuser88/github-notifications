@@ -3,7 +3,7 @@ Github Notifications
 
 This plugin show github notifications count in statusbar
 
-# Generating Access Token
+## Generating Access Token
 
 * Account Settings -> [Personal access tokens](https://github.com/settings/tokens)
 * "Generate new token" under "Personal access tokens"
@@ -21,6 +21,15 @@ Paste the token in the settings section under the token option.
     "template": "Github: {notif}"
 }
 
+```
+
+## Commands
+
+```javascript
+{
+    "caption": "Open Github Notifications",
+    "command": "open_github_notifications"
+}
 ```
 
 ## Screenshot
