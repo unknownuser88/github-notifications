@@ -11,7 +11,7 @@
 			"children": [{
 				"command": "open_file",
 				"args": {
-					"file": "${packages}/github-notifications/githubNotif.sublime-settings"
+					"file": "${packages}/Github Notifications/githubNotif.sublime-settings"
 				},
 				"caption": "Settings – Default"
 			}, {
